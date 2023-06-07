@@ -92,15 +92,3 @@ class CrissCrossAttention(nn.Module):
         out = out.contiguous()
 
         return out
-
-
-# if __name__ == '__main__':
-#     model = CrissCrossAttention(1024)   # 24051073
-#     # model = u_segnext_b()     # 36878721
-#     n_parameters = sum(p.numel() for p in model.parameters() if p.requires_grad)
-#     print("Number of params:", n_parameters)
-#     img = torch.randn(2, 1024, 256, 256)
-#     out = model(img)
-#     print(out.shape)
-#     # for i in range(len(out)):
-#     #     print(out[i].shape)
